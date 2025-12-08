@@ -59,6 +59,7 @@ return {
 				file_browser = {
 					hijack_netrw = true,
 					theme = "ivy",
+					initial_mode = "normal",
 					mappings = {
 						["i"] = {
 							["<A-c>"] = fb_actions.create,         -- Alt+c  create (file or folder)
