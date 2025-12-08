@@ -1,0 +1,5 @@
+tmux/plugins/*
+tmux/resurrect/*
+!tmux/plugins/.gitkeep
+!tmux/resurrect/.gitkeep
+*.idea
