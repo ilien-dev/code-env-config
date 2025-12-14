@@ -8,5 +8,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
-vim.opt.laststatus = 0
-vim.opt.showmode = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
+

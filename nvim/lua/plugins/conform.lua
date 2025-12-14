@@ -18,9 +18,6 @@ return {
 			format_on_save = function(bufnr)
 				-- Disable for big files if you want (performance guard)
 				local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
-				if ok and stats then
-					return nil -- don't format huge files automatically
-				end
 
 				return {
 					timeout_ms = 1000, -- hard timeout for slow tools
@@ -34,7 +31,7 @@ return {
 			conform.setup(opts)
 
 			-- 7. Manual keymap: format current buffer (normal + visual mode)
-			vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+			vim.keymap.set({ "n", "v" }, "<C-g>", function()
 				conform.format({
 					lsp_fallback = true,
 				})
